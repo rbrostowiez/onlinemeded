@@ -1,0 +1,212 @@
+{
+	"info": {
+		"_postman_id": "97e4b1fa-8939-49e5-8dbc-9d7146b0b4c2",
+		"name": "OnlineMedEd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v1/to-do-list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/to-do-list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/to-do-list/{{listId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list/{{listId}}",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list",
+						"{{listId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/to-do-list/{{listId}}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list/{{listId}}",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list",
+						"{{listId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/to-do-list/{{listId}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list/{{listId}}",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list",
+						"{{listId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/to-do-list/{{listId}}/to-do-items",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"description\": \"test\"\n}"
+				},
+				"url": {
+					"raw": "{{onlinemededHost}}/api/v1/to-do-list/{{listId}}/to-do-items",
+					"host": [
+						"{{onlinemededHost}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"to-do-list",
+						"{{listId}}",
+						"to-do-items"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

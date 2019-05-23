@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::prefix('v1')->group(function () {
+    Route::post('to-do-list/{listId}/to-do-items', 'ToDoListController@storeToDoListItem')->where('search', '.*');
+    Route::put('to-do-list/{listId}/to-do-items/{listItemId}','ToDoListController@updateToDoListItem');
+    Route::delete('to-do-list/{listId}/to-do-items/{listItemId}', 'ToDoListController@destroyListItem');
+
+    Route::apiResource('to-do-list', 'ToDoListController');
+});
+
